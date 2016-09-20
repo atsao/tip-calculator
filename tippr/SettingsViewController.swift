@@ -25,7 +25,6 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func changeTipDefault(_ sender: AnyObject) {
-//        let tipDefaults = [15, 18, 20]
         let tipDefaultIndex = tipSettingsControl.selectedSegmentIndex
         
         UserDefaults.standard.set(Int(tipDefaultIndex), forKey: "default_tip_index")

@@ -21,24 +21,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        if !launchedBefore {
-//            tipControl.selectedSegmentIndex = 0
-//        } else {
-//            tipControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: "default_tip_index")
-//        }
-        tipControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: "default_tip_index")
+
+//        tipControl.selectedSegmentIndex = UserDefaults.standard.integer(forKey: "default_tip_index")
         billField.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-
-//        currentTipIndex = UserDefaults.standard.integer(forKey: "default_tip_index")
-        
-//        tipAmount.text = String(format: "%d%%", currentTip)
         
         tipControl.selectedSegmentIndex = currentTipIndex
-        
         calculateTip(self)
     }
 
@@ -47,14 +38,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    @IBAction func onTap(_ sender: AnyObject) {
-//        view.endEditing(true)
-//    }
-    
     @IBAction func changeTip(_ sender: AnyObject) {
-        let selectedTipIndex = tipControl.selectedSegmentIndex
-        
-        currentTipIndex = selectedTipIndex
+        currentTipIndex = tipControl.selectedSegmentIndex
         calculateTip(self)
     }
 
