@@ -21,12 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        if !launchedBefore {
-//            UserDefaults.standard.set(0, forKey: "default_tip_index")
-//        } else {
-//            UserDefaults.standard.set(true, forKey: "launchedBefore")
-//            currentTipIndex = UserDefaults.standard.integer(forKey: "default_tip_index")
-//        }
         currentTipIndex = UserDefaults.standard.integer(forKey: "default_tip_index")
         UserDefaults.standard.synchronize()
         
